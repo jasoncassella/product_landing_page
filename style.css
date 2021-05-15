@@ -1,22 +1,16 @@
-body {margin:0;}
-
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 .email-container {
-  padding: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.email {
+  margin: .35em;
 }
 
 .left {
@@ -29,18 +23,14 @@ ul {
 
 li a {
   display: block;
-  color: white;
+  color: rgb(31, 27, 27);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;
+  color: black;
 }
 
 .grid-container {
@@ -55,4 +45,9 @@ li a:hover:not(.active) {
    border: 1px solid rgba(0, 0, 0, .8);
    padding: 20px;
    text-align: center;
+ }
+
+ #video {
+   display: block;
+   margin: auto;
  }
