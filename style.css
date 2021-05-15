@@ -1,8 +1,97 @@
-ul {
-  list-style-type: none;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:hover {
+  text-decoration: underline;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 607px) {
+  .toggle-button {
+    display: flex;
+  }
+   .navbar-links {
+     display: none;
+     width: 100%;
+   }
+
+   .navbar {
+     flex-direction: column;
+     align-items: flex-start;
+   }
+
+   .navbar-links ul {
+     width: 100%;
+     flex-direction: column;
+   }
+
+   .navbar-links li {
+     text-align: center;
+   }
+
+   .navbar-links li a {
+     padding: .5rem 1rem;
+   }
+
+   .navbar-links.active {
+     display: flex;
+   }
 }
 
 .email-container {
+  padding-top: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,26 +100,6 @@ ul {
 
 .email {
   margin: .35em;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-li a {
-  display: block;
-  color: rgb(31, 27, 27);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  color: black;
 }
 
 .grid-container {
