@@ -65,6 +65,7 @@ body {
    .navbar-links {
      display: none;
      width: 100%;
+     background-color: rgb(245, 255, 255);
    }
 
    .navbar {
