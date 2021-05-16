@@ -145,10 +145,12 @@ section {
   margin-top: 60px;
   flex-direction: row;
   justify-content: center;
+  padding: 1em;
 }
 
 .product {
   display: flex;
+  flex: 1;
   flex-direction: column;
   text-align: center;
   justify-content: around;
@@ -165,4 +167,37 @@ section {
   width: 100%;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+li {
+  list-style: none;
+}
+
+.product > button {
+  border:  0;
+  margin: 15px 0;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(42, 42, 42);
 }
