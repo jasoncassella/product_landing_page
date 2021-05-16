@@ -1,14 +1,19 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
 }
 
 .navbar {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   color: black;
@@ -62,38 +67,38 @@ body {
   .toggle-button {
     display: flex;
   }
-   .navbar-links {
-     display: none;
-     width: 100%;
-     background-color: rgb(245, 255, 255);
-   }
 
-   .navbar {
-     flex-direction: column;
-     align-items: flex-start;
-   }
+  .navbar-links {
+    display: none;
+    width: 100%;
+    background-color: rgb(245, 255, 255);
+  }
 
-   .navbar-links ul {
-     width: 100%;
-     flex-direction: column;
-   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-   .navbar-links li {
-     text-align: center;
-   }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
 
-   .navbar-links li a {
-     padding: .5rem 1rem;
-   }
+  .navbar-links li {
+    text-align: center;
+  }
 
-   .navbar-links.active {
-     display: flex;
-   }
+  .navbar-links li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
 }
 
 .email-container {
   padding-top: 3%;
-  padding-bottom: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,18 +112,57 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 150px auto;
-  padding: 5%;
+  padding: 5% 15%;
 }
 
-.grid-item {
-   line-height: normal;
-   background-color: rgba(255, 255, 255, .8);
-   border: 1px solid rgba(0, 0, 0, .8);
-   padding: 20px;
-   text-align: center;
- }
 
- #video {
-   display: block;
-   margin: auto;
- }
+.grid-item {
+  padding: 20px;
+  text-align: start;
+}
+
+.grid-icon {
+  text-align: center;
+}
+
+#video {
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 575px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-icon {
+    display: none;
+  }
+}
+
+section {
+  display: flex;
+  margin-top: 60px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: around;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
